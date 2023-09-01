@@ -1,0 +1,23 @@
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        // Define URLs for each navigation item
+        const urls = {
+        home: 'admin/index.php',
+        about: 'index.php',
+        work: 'order.php',
+        };
+
+        // Add a click event listener to each <li> element
+        $('#home, #about, #work').click(function () {
+        // Get the ID of the clicked <li> element
+        const id = $(this).attr('id');
+
+        // Check if the ID exists in the URLs object
+        if (id in urls) {
+            // Navigate to the corresponding URL
+            window.location.href = urls[id];
+        }
+        });
+    });
+    </script>
